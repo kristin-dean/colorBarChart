@@ -32,4 +32,15 @@ var drawChart = function(colorData)
     .attr("fill", function(d)
       { return d.color;})
 
+svg.selectAll("text")
+   .data(colorData)
+   .enter()
+   .append("text")
+   .text(function(d)
+      { return d.num;})
+   .attr("x", function(d,i)
+      { return (i * barWidth) + 5;})
+   .attr("y", function(d)
+      { return height - (d.num*4) + 15;})
+
 }
