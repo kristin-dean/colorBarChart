@@ -2,7 +2,7 @@ var dataP = d3.json("data/colors.json");
 
 dataP.then(function(data)
 {
-  console.log(data);
+  console.log("data",data);
 },
 function(err)
 {
