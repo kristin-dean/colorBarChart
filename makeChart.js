@@ -7,7 +7,7 @@ dataP.then(function(data)
 function(err)
 {
   console.lof(err);
-})
+});
 
 var drawChart = function(colorData)
 {
