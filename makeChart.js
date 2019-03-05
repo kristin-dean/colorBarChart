@@ -1,6 +1,6 @@
 var dataP = d3.json("data/colors.json");
 
-dataP.then(function(data)
+dataP.then(function(data))
 {
   console.log(data);
 },
