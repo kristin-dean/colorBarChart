@@ -39,8 +39,11 @@ svg.selectAll("text")
    .text(function(d)
       { return d.num;})
    .attr("x", function(d,i)
-      { return (i * barWidth) + 20;})
+      { return (i * barWidth) + 22;})
    .attr("y", function(d)
-      { return height - (d.num*4);})
+      { return height - (d.num*20)+18;})
+   .attr("fill", "white")
 
 }
+
+dataG = d3.csv("favorites.csv");
