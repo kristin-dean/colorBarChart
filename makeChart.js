@@ -29,7 +29,8 @@ var drawChart = function(colorData)
     .attr("width", barWidth)
     .attr("height", function(d)
       { return d.num*10;})
-    .attr("fill", function(d)
-       { return d.color;})
-     
+    .attr("fill", "black")
+    //function(d)
+      // { return d.color;})
+
 }
