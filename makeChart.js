@@ -39,7 +39,7 @@ svg.selectAll("text")
    .text(function(d)
       { return d.num;})
    .attr("x", function(d,i)
-      { return (i * barWidth) + 20;})
+      { return (i * barWidth) + 10;})
    .attr("y", function(d)
       { return height - (d.num*4) + 5;})
 
