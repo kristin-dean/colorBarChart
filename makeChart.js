@@ -1,4 +1,4 @@
-var dataP = d3.json("data/colors.json");
+var dataP = d3.json("colors.json");
 
 dataP.then(function(data)
 {
