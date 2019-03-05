@@ -1,12 +1,12 @@
 var dataP = d3.json("data/colors.json");
 
-dataP.then(function(data))
+dataP.then(function(data)
 {
   console.log(data);
 },
 function(err)
 {
-  console.lof(err);
+  console.log(err);
 });
 
 var drawChart = function(colorData)
