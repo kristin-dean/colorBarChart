@@ -64,7 +64,8 @@ svg.selectAll("text")
       } else {
         return "white";
       }
-      });
+      })
+   .attr("font-weight", "bold")
 
 }
 
