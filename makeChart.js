@@ -65,7 +65,7 @@ var drawLegend = function(colorData, idname)
 {
   var width = 200;
   var height = 200;
-  var barWidth = 50;
+  var boxWidth = 15;
   var svg = d3.select(idname)
               .attr("height", height)
               .attr("width", width);
@@ -77,8 +77,8 @@ var drawLegend = function(colorData, idname)
       { return 25;})
     .attr("y", function (d, i)
       { return height - i*15;})
-    .attr("width", barWidth)
-    .attr("height", barWidth)
+    .attr("width", boxWidth)
+    .attr("height", boxWidth)
     .attr("fill", function(d)
       { return d.color;})
 
