@@ -42,7 +42,7 @@ svg.selectAll("text")
    .attr("x", function(d,i)
       { return (i * barWidth) + 22;})
    .attr("y", function(d)
-      { return height - (d.num*20)+18;})
+      { return height - (d.num*20)+30;})
    .attr("fill", "white")
 
 }
