@@ -12,9 +12,9 @@ function(err)
 
 var drawChart = function(colorData, idname)
 {
-  var width = 400;
+  var width = 600;
   var height = 200;
-  var barWidth = width/colorData.length;
+  var barWidth = 400/colorData.length;
   var svg = d3.select(idname)
               .attr("height", height)
               .attr("width", width);
