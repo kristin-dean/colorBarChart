@@ -78,7 +78,7 @@ var drawLegend = function(colorData, idname)
     .attr("y", function (d, i)
       { return (i+1)*15 + 10;})
     .attr("width", boxWidth)
-    .attr("height", boxWidth-5)
+    .attr("height", boxWidth-3)
     .attr("fill", function(d)
       { return d.color;})
 
@@ -91,7 +91,7 @@ svg.selectAll("text")
    .attr("x", function(d,i)
       { return 45})
    .attr("y", function(d, i)
-      { return (i+1)*15 + 30;})
+      { return (i+1)*15 + 25;})
    .attr("fill", "black")
 
 }
