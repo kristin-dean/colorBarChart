@@ -58,7 +58,13 @@ svg.selectAll("text")
       { return (i * barWidth) + 21;})
    .attr("y", function(d)
       { return height - (d.num*20)+16;})
-   .attr("fill", "white")
+   .attr("fill", function(d) 
+      { if (d.color == "gold") {
+        return "black";
+      } else {
+        return "white";
+      }
+      });
 
 }
 
