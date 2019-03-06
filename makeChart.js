@@ -56,3 +56,41 @@ function(err)
 {
   console.log(err);
 });
+
+//************************************** function to create legends ******************************************//
+
+var drawLegend = function(colorData, idname)
+{
+  var width = 200;
+  var height = 200;
+  var barWidth = 50;
+  var svg = d3.select(idname)
+              .attr("height", height)
+              .attr("width", width);
+  svg.selectAll("rect")
+     .data(colorData)
+     .enter()
+     .append("rect")
+     .attr("x", function(d,i)
+      { return 25;})
+    .attr("y", function (d, i)
+      { return height - i*10;})
+    .attr("width", barWidth)
+    .attr("height", barWidth)
+    .attr("fill", function(d)
+      { return d.color;})
+
+svg.selectAll("text")
+   .data(colorData)
+   .enter()
+   .append("text")
+   .text(function(d)
+      { return d.color;})
+   .attr("x", function(d,i)
+      { return 30})
+   .attr("y", function(d, i)
+      { return height - i*10;})
+   .attr("fill", "black")
+
+}
+
