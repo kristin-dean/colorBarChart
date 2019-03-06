@@ -15,7 +15,7 @@ var drawChart = function(colorData)
   var width = 400;
   var height = 200;
   var barWidth = width/colorData.length;
-  var svg = d3.selectElementsByID("JSON")
+  var svg = d3.select("svg").selectElementsByID("JSON")
               .attr("height", height)
               .attr("width", width);
   svg.selectAll("rect")
