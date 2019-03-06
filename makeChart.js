@@ -3,19 +3,19 @@ var dataP = d3.json("colors.json");
 dataP.then(function(data)
 {
   console.log("data",data);
-  drawChart(data);
+  drawChart(data, "#JSON");
 },
 function(err)
 {
   console.log(err);
 });
 
-var drawChart = function(colorData)
+var drawChart = function(colorData, idname)
 {
   var width = 400;
   var height = 200;
   var barWidth = width/colorData.length;
-  var svg = d3.select("#JSON")
+  var svg = d3.select(idname)
               .attr("height", height)
               .attr("width", width);
   svg.selectAll("rect")
