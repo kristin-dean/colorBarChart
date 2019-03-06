@@ -47,3 +47,12 @@ svg.selectAll("text")
 }
 
 dataG = d3.csv("favorites.csv");
+dataG.then(function(data)
+{
+  console.log("data",data);
+  drawChart(data, "#CSV");
+},
+function(err)
+{
+  console.log(err);
+});
