@@ -1,4 +1,5 @@
 var dataP = d3.json("colors.json");
+var dataG = d3.csv("favorites.csv");
 
 dataP.then(function(data)
 {
@@ -10,6 +11,20 @@ function(err)
 {
   console.log(err);
 });
+
+dataG.then(function(dataName)
+{
+  console.log("data",dataName);
+  drawChart(dataName, "#CSV");
+  drawLegend(dataName, "#CSVkey");
+},
+function(err)
+{
+  console.log(err);
+});
+
+
+//************************************** function to create charts ******************************************//
 
 var drawChart = function(colorData, idname)
 {
@@ -47,17 +62,7 @@ svg.selectAll("text")
 
 }
 
-dataG = d3.csv("favorites.csv");
-dataG.then(function(dataName)
-{
-  console.log("data",dataName);
-  drawChart(dataName, "#CSV");
-  drawLegend(dataName, "#CSVkey");
-},
-function(err)
-{
-  console.log(err);
-});
+
 
 //************************************** function to create legends ******************************************//
 
